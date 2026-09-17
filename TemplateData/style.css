@@ -1,0 +1,131 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1a1d24;
+  color: #f2f4f7;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#unity-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  display: block;
+  background: #1a1d24;
+  outline: none;
+  touch-action: none;
+}
+
+.gate {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 30%, #262b36 0%, #14161c 70%);
+  z-index: 10;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.gate[hidden] { display: none; }
+
+.card {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 28px 26px 24px;
+  border-radius: 20px;
+  background: rgba(26, 29, 36, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 4px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sub {
+  margin: 0 0 6px;
+  color: #969caa;
+  font-size: 14px;
+}
+
+input[type="password"] {
+  font: inherit;
+  font-size: 16px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #181b21;
+  color: #f2f4f7;
+  outline: none;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+input[type="password"]:focus { border-color: #5c8ff2; }
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  color: #969caa;
+  font-size: 13px;
+}
+
+button {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #5c8ff2;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.6; cursor: default; }
+
+.error {
+  margin: 0;
+  color: #ff8f8f;
+  font-size: 14px;
+}
+
+.bar {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+#loading-bar {
+  width: 0%;
+  height: 100%;
+  background: #5c8ff2;
+  transition: width 0.2s;
+}
